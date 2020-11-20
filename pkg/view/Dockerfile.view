@@ -1,0 +1,10 @@
+FROM tbutzer/panel-hv
+
+ENV BOKEH_ALLOW_WS_ORIGIN=10.12.69.21,localhost
+
+COPY view.ipynb /home/view.ipynb
+
+WORKDIR /home
+
+CMD panel serve --address 0.0.0.0 --prefix=/view/ view.ipynb 
+
