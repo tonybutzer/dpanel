@@ -6,5 +6,5 @@ services:
   pie-service:
     image: tbutzer/pie-lite
     ports:
-    - 5006:5006
+    - 5100:5006
 

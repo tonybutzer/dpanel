@@ -1,6 +1,12 @@
 FROM tbutzer/panel-hv
 
-ENV BOKEH_ALLOW_WS_ORIGIN=10.12.69.21,localhost
+ENV BOKEH_ALLOW_WS_ORIGIN=10.12.69.188,localhost
+
+ENV CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+RUN pip install panel && pip install hvplot && pip install xarray \
+    && pip install rasterio==1.1.8 \
+    && pip install datashader
 
 COPY view.ipynb /home/view.ipynb
 
