@@ -33,5 +33,6 @@ EXPOSE 5006
 CMD panel serve \
     --allow-websocket-origin="*" \
     --num-procs=${NUM_PROCS} \
-    /examples/view.ipynb \
+    /examples/olena_view.ipynb \
+    /examples/tile1_view.ipynb \
     /examples/pie.ipynb 
